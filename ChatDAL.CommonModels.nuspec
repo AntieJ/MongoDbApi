@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>ChatDAL.CommonModels</id>
+    <version>1.0.0</version>
+    <authors>anton.jidkov</authors>
+    <owners>anton.jidkov</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>These are models shared by the chat DAL</description>
+    <copyright>Copyright 2016</copyright>
+  </metadata>
+<files>
+  <file src="DbApi\bin\ChatDAL.CommonModels.dll" target="lib" />
+</files>
+</package>
