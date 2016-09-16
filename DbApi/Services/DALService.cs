@@ -23,11 +23,12 @@ namespace DbApi.Services
             MongoConnection();
         }
 
-        public string Get(int id)
+        public string Get(string id)
         {
-            var document = _collection.Find(new BsonDocument()).FirstOrDefault();
+            var filter = Builders<BsonDocument>.Filter.Eq("_id", new ObjectId(id));
+            var document = _collection.Find(filter).FirstOrDefault();
             
-            return document.ToString();
+            return document.ToJson(new JsonWriterSettings { OutputMode = JsonOutputMode.Strict });
         }
 
         public string Get()

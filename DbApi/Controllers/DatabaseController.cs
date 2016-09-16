@@ -19,7 +19,7 @@ namespace DbApi.Controllers
 
         // GET api/chats/5
         [ActionName("chats")]
-        public HttpResponseMessage Getdb(int id)
+        public HttpResponseMessage Getdb(string id)
         {
             return GetHttpResponseMessage(_dbService.Get(id));
         }
